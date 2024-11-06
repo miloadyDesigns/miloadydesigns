@@ -17,14 +17,12 @@ import SideButton from "./_components/SideButton.jsx";
 import Footer from "./_components/Footer";
 import { useHeaderVisibility } from "@/context/HeaderVisibilityProvider ";
 import ContactForm from "./_components/ContactForm/ContactForm";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
-import locomotiveScroll from "locomotive-scroll";
 import ProcessSection from "./_components/Process";
 import { Tabs } from "@chakra-ui/react"
 import { LuCheckSquare, LuFolder, LuUser } from "react-icons/lu"
 
 
-gsap.registerPlugin(ScrollTrigger, useGSAP, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 const websites = [
   {
     id: 1,
@@ -86,23 +84,65 @@ const websites = [
 const logos = [
   {
     id: 1,
-    title: "Website Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officia porro alias autem nemo ipsam tenetur excepturi omnis, inventore, consequuntur!",
-    image: "/imp/portfolio.png",
+    title: "Denterprises & Dugan's Adventure",
+    description: "Our mobile app designs are user-centered, focusing on great user experiences and beautiful, intuitive interfaces that engage users from the start",
+    image: "/portfolio/1.png",
     link: "/portfolio/website-design" // Add this if you want the "Learn More" to link to another page
   },
   {
     id: 2,
-    title: "Mobile App Design",
+    title: "EON",
     description: "Our mobile app designs are user-centered, focusing on great user experiences and beautiful, intuitive interfaces that engage users from the start.",
-    image: "/imp/portfolio.png",
+    image: "/portfolio/2.png",
     link: "/portfolio/mobile-app-design"
   },
   {
     id: 3,
-    title: "UI/UX Design",
+    title: "Estero& Expert Valet",
     description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
-    image: "/imp/portfolio.png",
+    image: "/portfolio/3.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 4,
+    title: "Icon Sportz & Kodak",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/4.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 5,
+    title: "KRW & Lotus Photography",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/5.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 6,
+    title: "Mantastic & NSOP",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/6.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 7,
+    title: "Bilal Mirajkar & Construction Palace",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/7.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 8,
+    title: "Orajuice & Organic Life",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/8.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 9,
+    title: "Barn & Prosperty Trading",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/14.png",
     link: "/portfolio/ui-ux-design"
   }
 ];
@@ -138,13 +178,7 @@ export default function Home() {
   const serviceSection = useRef()
   const serviceHeadSection = useRef()
   const scrollRef = useRef()
-  useEffect(() => {
-    const scroll = new locomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      resetNativeScroll: true
-    });
-  });
+ 
 
 
   useGSAP(() => {
@@ -411,7 +445,7 @@ export default function Home() {
                     <Portfolio data={websites} />
                   </Tabs.Content>
                   <Tabs.Content value="Logo">
-                    <Portfolio data={websites} />
+                    <Portfolio data={logos} />
                   </Tabs.Content>
                 </Tabs.Root>
 
