@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+html {
+  --cursor-color: #333
+}
+
+html.dark-mode {
+  --cursor-color: #fff
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+
+@layer components {
+  .wrapper {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    max-height: 100vh;
+    /* Keep this uncommented */
+  }
+
+  .section {
+    min-height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+}
+
+
+@font-face {
+  font-family: 'fonce';
+  src: url('/fonts/FonceSans.ttf') format('truetype');
+  /* Corrected format */
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/fonts/poppins.ttf') format('truetype');
+  /* Corrected format */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'pp';
+  src: url('/fonts/pp.otf') format('opentype');
+  /* Corrected format */
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('/fonts/text.ttf') format('truetype');
+  /* Corrected format */
+}
+
+@font-face {
+  font-family: 'head';
+  src: url('/fonts/head.otf') format('opentype');
+  /* Corrected format */
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* From Uiverse.io by Creatlydev */
+.button {
+  cursor: pointer;
+  border: none;
+  background: #3b3b3b;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-content: center;
+  transition:
+    background 300ms,
+    transform 200ms;
+  font-weight: 600;
+}
+
+.button__text {
+  position: absolute;
+  inset: 0;
+  animation: text-rotation 8s linear infinite;
+
+  >span {
+    position: absolute;
+    transform: rotate(calc(19deg * var(--index)));
+    inset: 5px;
+  }
+}
+
+.button__circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background: #fff;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__icon--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+.button:hover .button__icon {
+  color: #000;
+}
+
+.button:hover .button__icon:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button:hover .button__icon--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+@keyframes text-rotation {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.shadow__btn {
+  padding: 15px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  border-radius: 1200px;
+}
+
+.shadow__btn {
+  background: black;
+  box-shadow: 0 0 25px rgb(216, 10, 10);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(219, 14, 14),
+    0 0 25px rgb(196, 23, 17),
+    0 0 50px rgb(199, 22, 16),
+    0 0 100px rgb(216, 19, 19);
+}
+
+.scroll-section-outer {
+  overflow: hidden;
+}
+
+.scroll-section-inner {
+  height: 100vh;
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.scroll-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  touch-action: pan-up;
+
+}
+
+
+
+#app canvas {
+
+  z-index: -1;
+  top: 0;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  z-index: 9999;
+}
