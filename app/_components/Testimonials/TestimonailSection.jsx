@@ -90,8 +90,8 @@ const TestimonailSection = () => {
             <div className="testimonialHead text-white  ml-[8%]  xs:w-[100%] lg:w-[30%] ">
                 <p className="text-[#999696] font-text pl-2 xs:text-[14px] lg:text-lg mt-2">Empowering the world through our technlogies</p>
                 <h1 className="text-while font-pp lg:text-[66px] xs:text-[38px] -mt-2">Our Testimonials</h1>
-                {/* <p className="text-white p-1 font-text xs:text-[14px] lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae sit facere necessitatibus ab neque consequuntur culpa repellendus, accusantium delectus minus quisquam, sed odit dicta cum numquam sunt illo ratione aliquam.</p>
-                <SideButton title={"L&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;O&nbsp;R&nbsp;&nbsp;E"} margin={"ml-2"} /> */}
+                <p className="text-white p-1 lg:hidden font-text xs:text-[14px] lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae sit facere necessitatibus ab neque consequuntur culpa repellendus, accusantium delectus minus quisquam, sed odit dicta cum numquam sunt illo ratione aliquam.</p>
+                {/* <SideButton title={"L&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;O&nbsp;R&nbsp;&nbsp;E"} margin={"ml-2"} /> */}
             </div>
             <div className="xs:w-[100%] lg:w-[60%] testimonialSwiper">
                 <Slider {...settings} className='lg:pl-24 xs:pl-0'>

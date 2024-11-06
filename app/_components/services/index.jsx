@@ -53,7 +53,7 @@ const servicesData = [
 
 
 const ServiceCard = ({ title, description, image, subheading }) => (
-    <div className='h-full flex xs:flex-col lg:flex-row xs:space-y-2 lg:space-x-16  xs:items-center'>
+    <div className='h-full flex xs:flex-col lg:flex-row xs:space-y-2 lg:space-x-16  xs:items-center lg:ml-[10%]'>
         <div className='lg:w-[50%] xs:w-[90%]'>
             <div className='flex flex-col justify-center h-full'>
                 <div className='bg-[#1B1D21] text-[#F87171] xs:w-[90%] lg:w-[140px] p-4 text-center rounded-lg ml-4 xs:text-[14px] lg:text-[16px] xs:mt-3 lg:mt-0'>Service</div>
@@ -76,10 +76,10 @@ const ServiceCard = ({ title, description, image, subheading }) => (
                 </div>
             </div>
             <Image
-                className='mx-auto'
+                className='mx-auto xs:mt-5 lg:mt-0'
                 src={image}
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 alt={title}
             />
         </div>
@@ -97,7 +97,7 @@ const ServiceCard = ({ title, description, image, subheading }) => (
 );
 
 const Services = () => {
-    
+
     return (
         <Swiper
             className='h-full'

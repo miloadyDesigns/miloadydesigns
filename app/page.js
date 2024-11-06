@@ -149,27 +149,63 @@ const logos = [
 const mobileApps = [
   {
     id: 1,
-    title: "Website Design",
+    title: "Fresha App",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officia porro alias autem nemo ipsam tenetur excepturi omnis, inventore, consequuntur!",
-    image: "/imp/portfolio.png",
+    image: "/portfolio/FRESHA.png",
     link: "/portfolio/website-design" // Add this if you want the "Learn More" to link to another page
   },
   {
     id: 2,
-    title: "Mobile App Design",
+    title: "E-commerce App",
     description: "Our mobile app designs are user-centered, focusing on great user experiences and beautiful, intuitive interfaces that engage users from the start.",
-    image: "/imp/portfolio.png",
+    image: "/portfolio/E-commerce.png",
     link: "/portfolio/mobile-app-design"
   },
   {
     id: 3,
-    title: "UI/UX Design",
+    title: "Plano Saloon App",
     description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
-    image: "/imp/portfolio.png",
+    image: "/portfolio/PLANO.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 4,
+    title: "Braketime App",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/Brake.png",
     link: "/portfolio/ui-ux-design"
   }
 ];
-
+const socialMedia = [
+  {
+    id: 1,
+    title: "Denteprises Batch 1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officia porro alias autem nemo ipsam tenetur excepturi omnis, inventore, consequuntur!",
+    image: "/portfolio/denter-G.png",
+    link: "/portfolio/website-design" // Add this if you want the "Learn More" to link to another page
+  },
+  {
+    id: 2,
+    title: "Denterprises Batch 2",
+    description: "Our mobile app designs are user-centered, focusing on great user experiences and beautiful, intuitive interfaces that engage users from the start.",
+    image: "/portfolio/denter-B.png",
+    link: "/portfolio/mobile-app-design"
+  },
+  {
+    id: 3,
+    title: "Cedar Cove Resort",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/Cedar.png",
+    link: "/portfolio/ui-ux-design"
+  },
+  {
+    id: 4,
+    title: "Denterprises",
+    description: "We specialize in creating seamless user interfaces and great user experiences. Our design is focused on usability, aesthetics, and functionality.",
+    image: "/portfolio/denter-W.png",
+    link: "/portfolio/ui-ux-design"
+  }
+];
 
 
 export default function Home() {
@@ -178,7 +214,7 @@ export default function Home() {
   const serviceSection = useRef()
   const serviceHeadSection = useRef()
   const scrollRef = useRef()
- 
+
 
 
   useGSAP(() => {
@@ -359,7 +395,7 @@ export default function Home() {
           </video>
 
 
-          <section className="absolute w-full xs:top-[8%] lg:top-[13%] left-0 flex flex-col lg:h-[85%] xs:h-[90%] z-10">
+          <section className="absolute w-full xs:top-[13%] lg:top-[15%] left-0 flex flex-col lg:h-[85%] xs:h-[90%] z-10">
             <div ref={serviceHeadSection} className="upperSection text-white  ml-[8%]  lg:w-[30%] xs:w-[90%]">
               <p className="text-[#999696] font-text pl-2 xs:text-[14px] lg:text-lg mt-2">Solutions Designed to Elevate Your Vision</p>
               <h1 className="text-while font-pp lg:text-[66px] xs:text-[38px] -mt-2">Our Services</h1>
@@ -393,11 +429,11 @@ export default function Home() {
             backgroundColor: "rgba(0, 0, 0, 0.45)",
             zIndex: 1,
           }}></div>
-          <section className="absolute w-full xs:top-[8%] lg:top-[13%] left-0 flex flex-col lg:h-[85%] xs:h-[90%] z-10">
+          <section className="absolute w-full xs:top-[13%] lg:top-[13%] left-0 flex flex-col lg:h-[85%] xs:h-[90%] z-10">
             <div ref={serviceHeadSection} className="portfolioSection text-white  ml-[8%]  lg:w-[30%] xs:w-[90%]">
               <p className="text-[#999696] font-text pl-2 xs:text-[14px] lg:text-lg mt-2">Empowering the world through our technlogies</p>
               <h1 className="text-while font-pp lg:text-[66px] xs:text-[38px] -mt-2">Our Portfolio</h1>
-              {/* <p className="text-white p-1 font-text xs:text-[14px] lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae sit facere necessitatibus ab neque consequuntur culpa repellendus.</p> */}
+              <p className="text-white lg:hidden p-1 font-text xs:text-[14px] lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae sit facere necessitatibus ab neque consequuntur culpa repellendus.</p>
               {/* <SideButton title={"L&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;O&nbsp;R&nbsp;&nbsp;E"} margin={'ml-2'} /> */}
             </div>
             <div className="h-full portfolio-swiper">
@@ -420,16 +456,23 @@ export default function Home() {
                       className="flex items-center gap-2 p-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-all ease-in-out duration-300"
                     >
                       {/* <LuFolder className="text-xl" /> */}
-                      Mobile Apps
+                      Apps
                     </Tabs.Trigger>
 
+                    <Tabs.Trigger
+                      value="Social Media"
+                      className="flex items-center gap-2 p-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-all ease-in-out duration-300"
+                    >
+                      {/* <LuFolder className="text-xl" /> */}
+                      Social Media
+                    </Tabs.Trigger>
                     {/* Logo Tab */}
                     <Tabs.Trigger
                       value="Logo"
                       className="flex items-center gap-2 p-2 rounded-lg cursor-pointer hover:bg-gray-700 transition-all ease-in-out duration-300"
                     >
                       {/* <LuCheckSquare className="text-xl" /> */}
-                      Logo Designs
+                      Designs
                     </Tabs.Trigger>
 
                     {/* {/* Tab Indicator (Positioned below the active tab) */}
@@ -442,7 +485,10 @@ export default function Home() {
                     <Portfolio data={websites} />
                   </Tabs.Content>
                   <Tabs.Content value="Mobile Apps">
-                    <Portfolio data={websites} />
+                    <Portfolio data={mobileApps} />
+                  </Tabs.Content>
+                  <Tabs.Content value="Social Media">
+                    <Portfolio data={socialMedia} />
                   </Tabs.Content>
                   <Tabs.Content value="Logo">
                     <Portfolio data={logos} />
