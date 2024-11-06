@@ -390,7 +390,7 @@ export default function Home() {
             muted
             className="absolute top-0 left-0 w-full h-full object-cover"
           >
-            <source src="/video/serviceSectionVideo.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dz8sirg5s/video/upload/v1730922373/Servicesectionvideo_pgamid.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -417,7 +417,7 @@ export default function Home() {
             muted
             className="absolute top-0 left-0 w-full h-full object-cover"
           >
-            <source src="/video/processSection1.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dz8sirg5s/video/upload/v1730922373/Processsection1_eu17gf.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="overlay" style={{
@@ -543,7 +543,7 @@ export default function Home() {
             muted
             className="absolute top-0 left-0 w-full h-full object-cover"
           >
-            <source src="/video/check.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dz8sirg5s/video/upload/v1730922372/Check_fz4qay.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="overlay" style={{
